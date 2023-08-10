@@ -1,6 +1,6 @@
 body{
     background-image:url(https://www.citsadigital.com/wp-content/uploads/2017/06/led.jpg);
-    background-size: 1800px ;
+    background-size: 100% ;
     background-color: aquamarine;
 }
 [class *='col-md'] { 
