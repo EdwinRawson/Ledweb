@@ -1,0 +1,209 @@
+@keyframes discoTocando {
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
+  
+  :root{
+    font-size: calc(0.8em + 0.3vmax);
+  }
+  
+  body{
+    background-image:url(https://images8.alphacoders.com/131/1319775.jpeg);
+    background-size: 120%;
+    background-color: rgb(30,30,30);
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .oculto{
+    display: none;
+  }
+  
+  .reproductor{
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-flow: row wrap;
+    right: 0;
+    left: 0;
+    padding: 1em 2em 2em;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em 1em;
+  }
+  
+  .reproductor button{
+    border: none;
+    background: none;
+    color: inherit;
+    font-size: 1.25em;
+    cursor: pointer;
+    padding: 0.5em;
+  }
+  
+  .reproductor button i{
+    transition-property: transform color;
+    transition-duration: 0.3s;
+    color: rgb(150, 150, 150);
+  }
+  
+  .reproductor button:hover i{
+    color: inherit;
+    transform: scale(1.2);
+  }
+  
+  .reproductor button:active i{
+    color: rgb(50, 50, 50);
+  }
+  
+  .reproductor button .fa-play, .reproductor button .fa-pause{
+    font-size: 2em;
+    margin-left: 0.1em;
+  }
+  
+  .reproductor .cancion{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-basis: 15em;
+  }
+  
+  .reproductor .cancion__titulo{
+    font-size: 0.8em;
+    margin: 0;
+    padding-top: 3.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .reproductor .cancion__caratula{
+    background-color: rgb(40,40,40);
+    border-radius: 50%;
+    border: 0.35em solid rgb(50,50,50);
+    width: 6em;
+    height: 6em;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    top: -3.5em;
+  }
+  .reproductor .cancion__caratula .brazo{
+    transition-property: transform, position;
+    transition-duration: 1s;
+    width: 4.2em;
+    height: 0.3em;
+    position: absolute;
+    top: -0.6em;
+    left: 0;
+    transform-origin: left top;
+    background-color: rgb(50,50,50);;
+    border: 1px solid rgb(100, 100, 100);
+  }
+  .reproductor.reproduciendo .cancion__caratula .brazo{
+    transform: rotate(15deg);
+  }
+  .reproductor .cancion__caratula .brazo::after{
+    content: "";
+    width: 1em;
+    height: 0.7em;
+    position: absolute;
+    top: -0.01em;
+    left: 3.9em;
+    transform: rotate(45deg);
+    background-color: rgb(0, 0, 0);
+  }
+  .reproductor .cancion__caratula .etiqueta{
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: rgb(200, 200, 200);
+    border: 0.5em solid rgb(50, 50, 50);
+  }
+  .reproductor .cancion__caratula .etiqueta::after{
+    content: "";
+    width: 0.3em;
+    height: 0.3em;
+    position: absolute;
+    top: 48%;
+    left: 43%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .reproductor .cancion__caratula img{
+    width: 100%;
+    animation-name: discoTocando;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .reproductor .cancion__caratula i{
+    font-size: 2em;
+    margin-right: 0.1em;
+    margin-bottom: 0.1em;
+  }
+  
+  .reproductor .reproduccion{
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    flex-basis: 20em;
+    justify-content: center;
+    align-items: center;
+  }
+  .reproductor .reproduccion__progreso{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+  }
+  .reproductor .reproduccion__controles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .reproductor .controles__reproduccion{
+    display: flex;
+    gap: 0.5em;
+    flex-grow: 1;
+    justify-content: center;
+    margin-left: 3em;
+  }
+  
+  .reproductor .controles__volumen{
+    position: relative;
+  }
+  .reproductor .controles__volumen button{
+    width: 1.5em;
+  }
+  .reproductor .controles__volumen input{
+    position: absolute;
+    width: 100px;
+    transform-origin: left;
+    transform: rotate(-90deg) translateY(1em) translateX(1.25em);
+    box-shadow: 0 0 3em 1em rgb(0, 0, 0);
+    padding: 2em 0em;
+  }
+  
+  .reproductor input[type="range"]{
+    cursor: pointer;
+  }
+  .reproductor input[type="range"]:active{
+    cursor: grabbing;
+  }
