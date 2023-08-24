@@ -1,7 +1,7 @@
 body{
     background-image:url(https://www.citsadigital.com/wp-content/uploads/2017/06/led.jpg);
     background-size: 100% ;
-    background-color: aquamarine;
+    background-color: navy;
 }
 [class *='col-md'] { 
 padding: 1rem;
@@ -15,4 +15,14 @@ color: white;
 text-align: center;
 color: blueviolet;
 }
+.repertorio{
+    padding: 1rem;
+background-color: #00000093 ;
+border: 2px solid silver;
+color: white;
 
+}
+
+#audio{
+    display:inline-table;
+    }

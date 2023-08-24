@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="estiloreproductor.css">
+  <script type="text/javascript" src="reproductor.js"></script>
+  <script src="https://kit.fontawesome.com/e465e8285d.js" crossorigin="anonymous"></script>
+  <title>Video Lan Copy - Reproductor de música</title>
+</head>
+<body>
+  <div class="reproductor">
+    <div class="cancion">
+      <div class="cancion__caratula">
+        <img class="oculto" src="" alt="Caratula de disco">
+        <div class="disco"><i class="fas fa-music"></i></div>
+        <div class="brazo"></div>
+        <div class="etiqueta">
+        </div>
+      </div>
+      <p class="cancion__titulo">¡Dale play!</p>
+    </div>
+
+    <div class="reproduccion">
+      <div class="reproduccion__progreso">
+        <input type="range" value="0" min="0" max="0" step="0.01">
+        <time>--:--/--:--</time>
+      </div>
+      <div class="reproduccion__controles">
+        <div class="controles__reproduccion">
+          <button type="button"><i class="fas fa-step-backward"></i></button>
+          <button type="button"><i class="fas fa-play"></i></button>
+          <button type="button"><i class="fas fa-step-forward"></i></button>
+        </div>
+        <div class="controles__volumen">
+          <button type="button" name="button"><i class="fas fa-volume-up"></i></button>
+          <input type="range" value="100" min="0" max="100" step="1" class="oculto">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+Play
+<i class="fas fa-play"></i>
+
+Pausa
+<i class="fas fa-pause"></i>
+
+Adelante
+<i class="fas fa-step-forward"></i>
+
+Atras
+<i class="fas fa-step-backward"></i>
+
+Volumen
+  Silenciado
+  <i class="fas fa-volume-mute"></i>
+
+  Bajo
+  <i class="fas fa-volume-down"></i>
+
+  Alto
+  <i class="fas fa-volume-up"></i>
+
+Corchea
+<i class="fas fa-music"></i>
